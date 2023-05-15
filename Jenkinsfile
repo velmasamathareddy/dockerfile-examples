@@ -5,20 +5,22 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Doing docker build..'
-		    sh 'docker build /var/lib/jenkins/workspace/docker-examples/ruby/.'
-		    sh 'docker build /var/lib/jenkins/workspace/docker-examples/tomcat/.'
-		    sh 'docker build /var/lib/jenkins/workspace/docker-examples/redis/.'
+		    sh 'docker build /var/lib/jenkins/workspace/docker-examples/ubuntu/.'
+		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/tomcat/.'
+		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/redis/.'
 		    
             }
         }
-        stage('Test') {
+        stage('Tagging') {
             steps {
-                echo 'Testing..'
+                echo 'Doing Docker Tagging..'
+		 sh 'docker tag komljen/ubuntu:latest velmasamatha123/myubuntu:latest'
             }
         }
-        stage('Deploy') {
+        stage('Docker Push to dockerhub') {
             steps {
-                echo 'Deploying....'
+                echo 'Docker push to docker hub....'
+	        sh 'docker push velmasamatha123/myubuntu:latest'
             }
 		}
         stage('Verification') {
