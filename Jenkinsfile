@@ -14,7 +14,7 @@ pipeline {
         stage('Tagging') {
             steps {
                 echo 'Doing Docker Tagging..'
-		 sh 'docker tag komljen/ubuntu:latest velmasamatha123/myubuntu:latest'
+		 sh 'docker tag ubuntu:trusty velmasamatha123/myubuntu:latest'
             }
         }
         stage('Docker Push to dockerhub') {
