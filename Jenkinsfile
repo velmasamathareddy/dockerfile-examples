@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Doing docker build..'
+		    sh 'docker build /var/lib/jenkins/workspace/docker-examples/maven/.'
+		    
             }
         }
         stage('Test') {
