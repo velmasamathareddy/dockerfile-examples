@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Doing docker build..'
-		    sh 'docker build /var/lib/jenkins/workspace/docker-examples/ubuntu/.'
+		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/ubuntu/.'
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/tomcat/.'
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/redis/.'
 		    
@@ -14,13 +14,13 @@ pipeline {
         stage('Tagging') {
             steps {
                 echo 'Doing Docker Tagging..'
-		 sh 'docker tag ubuntu:trusty velmasamatha123/myubuntu:latest'
+		// sh 'docker tag ubuntu:trusty velmasamatha123/myubuntu:latest'
             }
         }
         stage('Docker Push to dockerhub') {
             steps {
                 echo 'Docker push to docker hub....'
-	        sh 'docker push velmasamatha123/myubuntu:latest'
+	      //  sh 'docker push velmasamatha123/myubuntu:latest'
             }
 		}
         stage('Verification') {
