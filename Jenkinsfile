@@ -8,6 +8,7 @@ pipeline {
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/ubuntu/.'
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/tomcat/.'
 		    sh 'docker build /var/lib/jenkins/workspace/docker-examples/ruby/.'
+		    sh 'docker  images'
 		    
             }
         }
