@@ -5,9 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Doing docker build..'
-		     sh ' java --version'
-		    sh 'git --version'
-		     sh 'docker --version'
+		     sh ' docker run nginx'
+		    sh 'docker images'
+		     sh 'docker ps'
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/ubuntu/.'
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/tomcat/.'
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/redis/.'
