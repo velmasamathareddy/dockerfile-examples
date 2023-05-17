@@ -8,7 +8,7 @@ pipeline {
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/ubuntu/.'
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/tomcat/.'
 		    sh 'docker build /var/lib/jenkins/workspace/docker-examples/tomcat/.'
-		    sh 'docker  run -d nginx'
+		    sh 'docker  run --name web nginx'
 		    
             }
         }
