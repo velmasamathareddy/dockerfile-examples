@@ -9,7 +9,7 @@ pipeline {
 		   // sh 'docker build /var/lib/jenkins/workspace/docker-examples/tomcat/.'
 		    sh 'docker build /var/lib/jenkins/workspace/docker-examples/tomcat/.'
 		    sh 'docker  run --name web nginx'
-		    sh 'docker --version'
+		   // sh 'docker --version'
 		    sh 'git --version'
             }
         }
