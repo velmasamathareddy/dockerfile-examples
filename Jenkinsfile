@@ -11,7 +11,7 @@ pipeline {
 		    sh 'docker  run --name web nginx'
 		   // sh 'docker --version'
 		    sh 'git --version'
-            }
+            }  
         }
         stage('Tagging') {
             steps {
