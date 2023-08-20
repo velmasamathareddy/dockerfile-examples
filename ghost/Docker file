@@ -21,4 +21,4 @@ VOLUME ["$APP_ROOT"]
 RUN rm /usr/sbin/policy-rc.d
 CMD ["/start.sh"]
 
-EXPOSE 2368
+EXPOSE 2368 
